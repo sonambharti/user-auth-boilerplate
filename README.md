@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
+
+## MVC Pattern
+
+This Project is based on MVC (Model, View, Controller) Pattern.
+
+1. Model Component
+    - refers to all the data related logic to the project.
+    - Here, we are ussing moongose, and MongoDB.
+
+2. View Componet 
+     - all the UI logic.
+     - Here, we are using React JS in client-server.
+    
+3. Controller Component
+    - act as an interface between the model and view and works for Bussiness Logic.
+    - Here, we are using express, routers, and act as controllers (for register login).
