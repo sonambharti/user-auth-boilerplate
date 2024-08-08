@@ -3,8 +3,6 @@ const router = express.Router();
 
 const { signUp, login } = require("../controllers/auth");
 
-console.log("SignUp resp: ", signUp)
-
 // router.route("/register").post(signUp);
 // router.route("/login").post(login);
 
