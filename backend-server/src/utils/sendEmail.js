@@ -15,7 +15,8 @@ var transporter = nodemailer.createTransport({
 
 var mailOptions = {
     from: email,
-    to: {email},
+    // to: {email},
+    to: 's.bharti14021999@gmail.com',
     subject: 'verify your Account',
     text: 'text'
 };
@@ -29,3 +30,5 @@ transporter.sendMail(mailOptions, function(error, info) {
         // console.log('Email sent: ' + info.response);
     }
 });
+
+module.exports = sendEmail;

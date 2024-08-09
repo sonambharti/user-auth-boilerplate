@@ -1,8 +1,8 @@
 const express = require("express");
-require("dotenv").config({ path: "backend-server/config.env" });
+require("dotenv").config({path: 'backend-server/config.env'});
 const _ = require("lodash");
 const jwt = require("jsonwebtoken");
-const sendEmail = require("../utils/sendEmail");
+const sendEmail = require("../utils/transporter");
 const { reduceRight } = require("lodash");
 const User = require("../models/User");
 

@@ -27,7 +27,7 @@ const {
   });
   
   
-router.route("/login")
+router.route("/users/login")
     .post((req, res, next) => {
       try {
         login(req, res, next);

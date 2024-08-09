@@ -36,8 +36,7 @@ const UserSchema = new Schema(
       },
     },
     resetPasswordLink: {
-      data: String,
-      default: "",
+      data: String
     },
 
     tokens: [
