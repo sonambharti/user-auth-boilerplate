@@ -1,4 +1,4 @@
-import styles from "../home/Home.module.css";
+import styles from "../Style/Home.css";
 import React, { useEffect, useState } from "react";
 import jwt from "jsonwebtoken";
 import axios from "axios";
