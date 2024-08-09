@@ -29,7 +29,8 @@
     "yup": "^1.4.0"
   },
   "scripts": {
-    "start": "node backend-server/src/index.js",
+    // "start": "node backend-server/src/index.js",
+    "start": "react-scripts start",
     "dev": "nodemon backend-server/src/index.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
