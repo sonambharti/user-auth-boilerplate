@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link,withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router';
 import { isAuth, signout } from "../helpers";
 import Navbar from "../../components/Navbar";
@@ -52,6 +52,14 @@ return (
       <div>{children}</div>
     </>
   );
+};
+
+export const withRouter = (Component) => {
+	const Wrapper = (props) => {
+		const history = useNavigate();
+		return <Component history={history} {...props} />;
+	};
+	return Wrapper;
 };
 
 export default withRouter(Layout);
