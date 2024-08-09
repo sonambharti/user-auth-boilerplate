@@ -5,7 +5,8 @@ var nodemailer = require('nodemailer');
 const password = process.env.NODEMAILER_PASS;
 const email = process.env.NODEMAILER_email;
 
-var transporter = nodemailer.createTransport({
+const sendEmail = ({ email, title, text }) => {
+    var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
         user: email,
@@ -16,9 +17,9 @@ var transporter = nodemailer.createTransport({
 var mailOptions = {
     from: email,
     // to: {email},
-    to: 's.bharti14021999@gmail.com',
-    subject: 'verify your Account',
-    text: 'text'
+    to: { email },
+    subject: title,
+    text: text
 };
 
 transporter.sendMail(mailOptions, function(error, info) {
@@ -30,5 +31,5 @@ transporter.sendMail(mailOptions, function(error, info) {
         // console.log('Email sent: ' + info.response);
     }
 });
-
+};
 module.exports = sendEmail;
